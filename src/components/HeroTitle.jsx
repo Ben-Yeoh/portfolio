@@ -37,7 +37,7 @@ const HeroTitle = () => {
         <div>
           <Title>Ben Yeoh</Title>
           <Subtitle>Software Developer</Subtitle>
-          <Aside>Hi there! I'm an aspiring software engineer who's passionate about learning all things innovative. capable of making a tangible difference.</Aside>
+          <Aside>Hi there! I'm an aspiring software engineer who's passionate about learning all things innovative. I enjoy contributing to work capable of making a tangible difference.</Aside>
           <a href="mailto:ben.yeoh@outlook.com">
             <button class="buttons offset" style={{marginTop: "60px"}}>Drop a Line</button>
           </a>
