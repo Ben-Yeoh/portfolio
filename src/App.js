@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroTitle from "./components/HeroTitle";

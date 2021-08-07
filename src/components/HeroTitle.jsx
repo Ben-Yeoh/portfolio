@@ -32,7 +32,7 @@ const Main = styled.div`
 
 const HeroTitle = () => {
   const mailTo = (e) => {
-    window.location = "mailto:someone@yoursite.com";
+    window.location = "mailto:ben.yeoh@outlook.com";
     e.preventDefault();
   };
 
