@@ -31,11 +31,6 @@ const Main = styled.div`
 `;
 
 const HeroTitle = () => {
-  const mailTo = (e) => {
-    window.location = "mailto:ben.yeoh@outlook.com";
-    e.preventDefault();
-  };
-
   return (
     <>
       <Main>
@@ -43,7 +38,9 @@ const HeroTitle = () => {
           <Title>Ben Yeoh</Title>
           <Subtitle>Software Developer</Subtitle>
           <Aside>Hi there! I'm an aspiring software engineer who's passionate about learning all things innovative. capable of making a tangible difference.</Aside>
-          <button onClick={(e) => mailTo(e)} class="buttons offset" style={{marginTop: "60px"}}>Drop a Line</button>
+          <a href="mailto:ben.yeoh@outlook.com">
+            <button class="buttons offset" style={{marginTop: "60px"}}>Drop a Line</button>
+          </a>
         </div>
       </Main>
     </>
