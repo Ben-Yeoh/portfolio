@@ -9,7 +9,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-  color: ${(props) => props.theme.highlight};
+  color: ${(props) => props.theme.primary};
   font-weight: 600;
   font-size: 2em;
 `;
@@ -52,6 +52,7 @@ const Display = styled.div`
 `;
 
 const Main = styled.div`
+  padding-top: 5vh;
   padding-left: 10%;
   background-color: ${(props) => props.theme.content};
   margin-bottom: 80px;
@@ -84,42 +85,43 @@ const Projects = () => {
   const MouseOut = () => setVisible(false);
 
   return (
-    <Main>
-      <span id="projects" />
-      <Title>My Projects</Title>
-      <Project>
-        <Subtitle>keylogger.app</Subtitle>
-        <Info>
-          <Card>
-            <Description>
-              A source of knowledge covering the world of keylogging exploits and the countermeasures you can take. Learn to also design your very own keylogging scripts with in an indepth step-by-step guide.
-              <HR />
-                <TechUsed>
-                  React.js, Gatsby, Firebase
-                </TechUsed>
-            </Description>
-          </Card>
-          <a href="https://www.keylogger.app/">
-            <Display onMouseEnter={MouseEnter} onMouseLeave={MouseOut}>
-            {visible ? (
-              <>
-                <Image
-                  style={{ filter: "blur(5px)" }}
-                  src={Keylogger}
-                  alt="keylogger.app screenshot"
-                />
-                <Overlay>
-                  <a href="https://www.keylogger.app/"><i>www.keylogger.app</i></a>
-                </Overlay>
-              </>
-            ) : (
-              <Image src={Keylogger} alt="keylogger.app screenshot" />
-            )}
-            </Display>
-          </a>
-        </Info>
-      </Project>
-    </Main>
+    <div id="projects">
+      <Main>
+        <Title>My Projects</Title>
+        <Project>
+          <Info>
+            <Card>
+              <Subtitle>keylogger.app</Subtitle>
+              <Description>
+                A source of knowledge covering the world of keylogging exploits and the countermeasures you can take. Learn to also design your very own keylogging scripts with in an indepth step-by-step guide.
+                <HR />
+                  <TechUsed>
+                    React.js, Gatsby, Firebase, Netlify
+                  </TechUsed>
+              </Description>
+            </Card>
+            <a href="https://www.keylogger.app/">
+              <Display onMouseEnter={MouseEnter} onMouseLeave={MouseOut}>
+              {visible ? (
+                <>
+                  <Image
+                    style={{ filter: "blur(5px)" }}
+                    src={Keylogger}
+                    alt="keylogger.app screenshot"
+                  />
+                  <Overlay>
+                    <a href="https://www.keylogger.app/"><i>www.keylogger.app</i></a>
+                  </Overlay>
+                </>
+              ) : (
+                <Image src={Keylogger} alt="keylogger.app screenshot" />
+              )}
+              </Display>
+            </a>
+          </Info>
+        </Project>
+      </Main>
+    </div>
   );
 };
 

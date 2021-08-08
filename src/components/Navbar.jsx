@@ -73,13 +73,12 @@ const Main = styled.main`
   justify-content: flex-end;
   position: sticky;
   top: 0;
-  padding-top: 50px;
   padding-right: 100px;
   background-color: rgba(33, 19, 43, 0.9);
   // backdrop-filter: blur(3px);
   z-index: 1;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 `;
 
 const Navbar = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Title = styled.h1`
-  color: ${(props) => props.theme.secondary};
+  color: white;
   font-size: 3em;
   font-weight: 600;
 `;
@@ -16,28 +16,49 @@ const Subtitle = styled.h2`
 
 const CompanyTitle = styled.span`
   color: ${(props) => props.theme.secondary};
-  font-size: 1.8em;
+  font-size: 1.3em;
   font-weight: 500;
   margin: 0;
 `;
 
 const Time = styled.span`
   color: ${(props) => props.theme.secondary};
-  font-size: 1.8em;
+  font-size: 1.3em;
   margin: 0;
   padding-left: 6px;
 `;
 
 const Description = styled.p`
-  color: ${(props) => props.theme.tertiary};
-  width: 80%;
+  color: ${(props) => props.theme.secondary};
   font-size: 1.2em;
+  padding-left: 15px;
+  padding-bottom: 10px;
 `;
 
 const Main = styled.div`
-  width: 50%;
-  padding-left: 10%;
+  width: 80vw;
+  margin-left: 15vh;
   background: ${(props) => props.theme.accent};
+`;
+
+const Heading = styled.div`
+  background-color: rgba(33, 19, 43, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 15px;
+  border-radius: 3px;
+  padding: 20px;
+`;
+
+const Job = styled.div`
+  width: 40%;
+  background-color: rgba(33, 19, 43, 0.4);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 7vh;
+`;
+
+const Jobs = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 const List = styled.ul`
@@ -82,53 +103,66 @@ const Background = styled.div`
 
 const Experience = () => {
   return (
-    <Background>
-      <Box>
-        <Wrapper>
-          <Main>
-            <span id="experience" />
-            <Title>Experience</Title>
-            <div>
-              <Subtitle>Operations/HR Consultant Intern</Subtitle>
-              <CompanyTitle>HSBC</CompanyTitle> <Time>(2021 Feb - May)</Time>
-              <Description>
-                <List>
-                  <ListItem>
-                    Collaborated with 6 consultants, aiming to improve
-                    intergenerational cohesion within the firm
-                  </ListItem>
-                  <ListItem>
-                    Innovated multiple operational plans addressing team
-                    communication
-                  </ListItem>
-                  <ListItem>
-                    Developed a successful team communication plan to be
-                    implemented within the Asia-Pacific region in 2022
-                  </ListItem>
-                </List>
-              </Description>
-              <Subtitle>Private Tutor</Subtitle>
-              <CompanyTitle>Self-employed</CompanyTitle>{" "}
-              <Time>(2019 - Present)</Time>
-              <Description>
-                <List>
-                  <ListItem>
-                    Instructed 15 HSC students in Software Design & Development,
-                    Mathematics and Physics.
-                  </ListItem>
-                  <ListItem>
-                    Independently managed personal and teaching schedules
-                  </ListItem>
-                  <ListItem>
-                    Developed individualised learning and development plans
-                  </ListItem>
-                </List>
-              </Description>
-            </div>
-          </Main>
-        </Wrapper>
-      </Box>
-    </Background>
+    <div id="experience">
+      <Background>
+        <Box>
+          <Wrapper>
+            <Main>
+              <Title>Experience</Title>
+              <Jobs>
+                <Job>
+                  <Heading>
+                    <Subtitle>Operations/HR Consultant Intern</Subtitle>
+                    <CompanyTitle>HSBC</CompanyTitle>{" "}
+                    <Time>(2021 Feb - May)</Time>
+                  </Heading>
+                  <Description>
+                    <List>
+                      <ListItem>
+                        Collaborated with 6 consultants, aiming to improve
+                        intergenerational cohesion within the firm
+                      </ListItem>
+                      <ListItem>
+                        Innovated multiple operational plans addressing team
+                        communication
+                      </ListItem>
+                      <ListItem>
+                        Developed a successful team communication plan to be
+                        implemented within the Asia-Pacific region in 2022
+                      </ListItem>
+                    </List>
+                  </Description>
+                </Job>
+                <Job>
+                  <Heading>
+                    <Subtitle>Private Tutor</Subtitle>
+                    <CompanyTitle>Self-employed</CompanyTitle>{" "}
+                    <Time>(2019 - Present)</Time>
+                  </Heading>
+                  <Description>
+                    <List>
+                      <ListItem>
+                        Instructed 15 HSC students in Software Design &
+                        Development, Mathematics and Physics.
+                      </ListItem>
+                      <ListItem>
+                        Independently managed personal and teaching schedules
+                      </ListItem>
+                      <ListItem>
+                        Developed individualised learning and development plans
+                      </ListItem>
+                    </List>
+                  </Description>
+                </Job>
+              </Jobs>
+              <div>
+
+              </div>
+            </Main>
+          </Wrapper>
+        </Box>
+      </Background>
+    </div>
   );
 };
 
