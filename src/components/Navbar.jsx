@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Option = styled(Link)`
   color: ${props => props.theme.primary};
+  text-decoration: none;
 `;
 
 const Navigation = styled.div`

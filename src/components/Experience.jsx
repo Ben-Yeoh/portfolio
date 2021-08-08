@@ -50,6 +50,7 @@ const ListItem = styled.li`
     position: absolute;
     left: 0;
   }
+  margin-bottom: 10px;
 `;
 
 const Experience = () => {
