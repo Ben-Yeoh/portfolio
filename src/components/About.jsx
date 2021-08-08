@@ -16,7 +16,7 @@ const Main = styled.div`
   width: 50%;
   background-color: ${(props) => props.theme.highlight};
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 5px;
+  border-radius: 3px;
   margin-left: 100px;
 `;
 
