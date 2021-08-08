@@ -6,7 +6,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  color: ${(props) => props.theme.tertiary};
+  color: ${(props) => props.theme.secondary};
   width: 80%;
   font-size: 1.2em;
 `;

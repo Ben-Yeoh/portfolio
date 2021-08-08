@@ -71,13 +71,13 @@ $colors: (
   raise: #ffa260, 
   up: #e4cb58, 
   slide: #8fc866, 
-  offset: #e8caffb5
+  offset: #4b3459
 );
 
 @each $button, $color in $colors {
   .#{$button} {
     --color: #{$color};
-    --hover: #{adjust-hue($color, 45deg)};
+    --hover: #{adjust-hue($color, 20deg)};
   }
 }
 

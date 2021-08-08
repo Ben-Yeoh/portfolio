@@ -13,7 +13,7 @@ const Subtitle = styled.h2`
 `;
 
 const Description = styled.p`
-  color: ${(props) => props.theme.tertiary};
+  color: ${(props) => props.theme.secondary};
   width: 80%;
   font-size: 1.2em;
 `;
@@ -30,6 +30,8 @@ const Card = styled.div`
 const Image = styled.img`
   height: 100%;
   height: 450px;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
 const Overlay = styled.div`
@@ -49,11 +51,28 @@ const Display = styled.div`
 
 const Main = styled.div`
   padding-left: 10%;
+  background-color: ${(props) => props.theme.content};
 `;
 
 const Project = styled.div`
   display: flex;
-  width: 80%;
+  flex-direction: column;
+  width: 80vw;
+`;
+
+const HR = styled.hr`
+  border: 0;
+  height: 1px;
+  margin-top: 25px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+`;
+
+const TechUsed = styled.p`
+
+`;
+
+const Info = styled.div`
+  display: flex;
 `;
 
 const Projects = () => {
@@ -66,39 +85,36 @@ const Projects = () => {
       <span id="projects" />
       <Title>My Projects</Title>
       <Project>
-        <div>
-          <Subtitle>keylogger.app</Subtitle>
+        <Subtitle>keylogger.app</Subtitle>
+        <Info>
           <Card>
             <Description>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              faucibus bibendum ante eget sodales. Sed volutpat justo sit amet
-              imperdiet condimentum. Sed volutpat justo sit amet imperdiet
-              condimentum.
-              <hr />
-              <ul>
-                <li>React.js</li>
-                <li>Gatsby</li>
-                <li>Firebase</li>
-              </ul>
+              A source of knowledge covering the world of keylogging exploits and the countermeasures you can take. Learn to also design your very own keylogging scripts with in an indepth step-by-step guide.
+              <HR />
+                <TechUsed>
+                  React.js, Gatsby, Firebase
+                </TechUsed>
             </Description>
           </Card>
-        </div>
-        <Display onMouseEnter={MouseEnter} onMouseLeave={MouseOut}>
-          {visible ? (
-            <>
-              <Image
-                style={{ filter: "blur(3px)" }}
-                src={Keylogger}
-                alt="keylogger.app screenshot"
-              />
-              <Overlay>
-                <a href="https://www.keylogger.app/">www.keylogger.app</a>
-              </Overlay>
-            </>
-          ) : (
-            <Image src={Keylogger} alt="keylogger.app screenshot" />
-          )}
-        </Display>
+          <a href="https://www.keylogger.app/">
+            <Display onMouseEnter={MouseEnter} onMouseLeave={MouseOut}>
+            {visible ? (
+              <>
+                <Image
+                  style={{ filter: "blur(5px)" }}
+                  src={Keylogger}
+                  alt="keylogger.app screenshot"
+                />
+                <Overlay>
+                  <a href="https://www.keylogger.app/"><i>www.keylogger.app</i></a>
+                </Overlay>
+              </>
+            ) : (
+              <Image src={Keylogger} alt="keylogger.app screenshot" />
+            )}
+            </Display>
+          </a>
+        </Info>
       </Project>
     </Main>
   );

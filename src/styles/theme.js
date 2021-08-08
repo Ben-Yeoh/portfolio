@@ -4,6 +4,7 @@ const theme = {
   tertiary: "#e8caffb5",
   body: "#E3D1C4",
   highlight: "#4b3459",
+  content: "#F6F9FC",
 };
 
 export default theme;

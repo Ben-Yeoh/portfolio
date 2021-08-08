@@ -7,6 +7,7 @@ import HeroTitle from "./components/HeroTitle";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import Contact from "./components/Contact";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
 
@@ -29,6 +30,7 @@ function App() {
           <About />
           <Projects />
           <Experience id="experience" />
+          <Contact />
         </Main>
       </ThemeProvider>
     </Router>
