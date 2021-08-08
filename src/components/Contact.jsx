@@ -30,6 +30,8 @@ const Main = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${(props) => props.theme.content};
+  padding-top: 10vh;
+  padding-bottom: 30vh;
 `;
 
 const Contact = () => {

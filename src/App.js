@@ -11,8 +11,6 @@ import Contact from "./components/Contact";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
 
-const Main = styled.div``;
-
 function App() {
   React.useEffect(() => {
     document.body.style.backgroundColor = "#21132b";
@@ -21,7 +19,7 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <Main>
+        <div>
           <Navbar />
           <Suspense fallback={<div>...</div>}>
             <AnimationCanvas />
@@ -31,7 +29,7 @@ function App() {
           <Projects />
           <Experience id="experience" />
           <Contact />
-        </Main>
+        </div>
       </ThemeProvider>
     </Router>
   );

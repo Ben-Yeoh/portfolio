@@ -19,8 +19,8 @@ const Subtitle = styled.h2`
 
 const Aside = styled.p`
   color: ${props => props.theme.tertiary};
-  margin: 0;
   font-size: 1.2em;
+  margin: 0;
   width: 50%;
 `;
 

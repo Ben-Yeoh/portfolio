@@ -34,7 +34,7 @@ const Description = styled.p`
 const Main = styled.div`
   width: 50%;
   padding-left: 10%;
-  background-color: ${(props) => props.theme.accent};
+  background: ${(props) => props.theme.accent};
 `;
 
 const List = styled.ul`
@@ -53,43 +53,79 @@ const ListItem = styled.li`
   margin-bottom: 10px;
 `;
 
+const Box = styled.div`
+  background-color: ${(props) => props.theme.highlight};
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 50px;
+  padding: 5% 20px;
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+`;
+
+const Wrapper = styled.div`
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);
+`;
+
+const Background = styled.div`
+  background-color: ${(props) => props.theme.content};
+`;
+
 const Experience = () => {
   return (
-    <Main>
-      <span id="experience" />
-      <Title>Experience</Title>
-      <div>
-        <Subtitle>Operations/HR Consultant Intern</Subtitle>
-        <CompanyTitle>HSBC</CompanyTitle> <Time>(2021 Feb - May)</Time>
-        <Description>
-          <List>
-            <ListItem>
-              Collaborated with 6 consultants, aiming to improve
-              intergenerational cohesion within the firm
-            </ListItem>
-            <ListItem>
-              Innovated multiple operational plans addressing team communication
-            </ListItem>
-            <ListItem>
-              Developed a successful team communication plan to be implemented
-              within the Asia-Pacific region in 2022
-            </ListItem>
-          </List>
-        </Description>
-        <Subtitle>Private Tutor</Subtitle>
-        <CompanyTitle>Self-employed</CompanyTitle> <Time>(2019 - Present)</Time>
-        <Description>
-          <List>
-            <ListItem>
-              Instructed 15 HSC students in Software Design & Development,
-              Mathematics and Physics.
-            </ListItem>
-            <ListItem>Independently managed personal and teaching schedules</ListItem>
-            <ListItem>Developed individualised learning and development plans</ListItem>
-          </List>
-        </Description>
-      </div>
-    </Main>
+    <Background>
+      <Box>
+        <Wrapper>
+          <Main>
+            <span id="experience" />
+            <Title>Experience</Title>
+            <div>
+              <Subtitle>Operations/HR Consultant Intern</Subtitle>
+              <CompanyTitle>HSBC</CompanyTitle> <Time>(2021 Feb - May)</Time>
+              <Description>
+                <List>
+                  <ListItem>
+                    Collaborated with 6 consultants, aiming to improve
+                    intergenerational cohesion within the firm
+                  </ListItem>
+                  <ListItem>
+                    Innovated multiple operational plans addressing team
+                    communication
+                  </ListItem>
+                  <ListItem>
+                    Developed a successful team communication plan to be
+                    implemented within the Asia-Pacific region in 2022
+                  </ListItem>
+                </List>
+              </Description>
+              <Subtitle>Private Tutor</Subtitle>
+              <CompanyTitle>Self-employed</CompanyTitle>{" "}
+              <Time>(2019 - Present)</Time>
+              <Description>
+                <List>
+                  <ListItem>
+                    Instructed 15 HSC students in Software Design & Development,
+                    Mathematics and Physics.
+                  </ListItem>
+                  <ListItem>
+                    Independently managed personal and teaching schedules
+                  </ListItem>
+                  <ListItem>
+                    Developed individualised learning and development plans
+                  </ListItem>
+                </List>
+              </Description>
+            </div>
+          </Main>
+        </Wrapper>
+      </Box>
+    </Background>
   );
 };
 

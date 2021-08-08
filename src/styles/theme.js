@@ -5,6 +5,7 @@ const theme = {
   body: "#E3D1C4",
   highlight: "#4b3459",
   content: "#F6F9FC",
+  background: "#21132b",
 };
 
 export default theme;
