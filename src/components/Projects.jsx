@@ -3,13 +3,15 @@ import styled from "styled-components";
 import Keylogger from "../assets/keylogger.png";
 
 const Title = styled.h1`
-  color: ${(props) => props.theme.secondary};
+  color: ${(props) => props.theme.highlight};
+  font-size: 3em;
+  font-weight: 700;
 `;
 
 const Subtitle = styled.h2`
-  color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.highlight};
   font-weight: 600;
-  font-size: 1.7em;
+  font-size: 2em;
 `;
 
 const Description = styled.p`
@@ -52,6 +54,7 @@ const Display = styled.div`
 const Main = styled.div`
   padding-left: 10%;
   background-color: ${(props) => props.theme.content};
+  margin-bottom: 80px;
 `;
 
 const Project = styled.div`

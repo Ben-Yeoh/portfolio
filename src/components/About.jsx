@@ -26,19 +26,14 @@ const About = () => {
       <span id="about" />
       <Title>About Me</Title>
       <Description>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus
-        bibendum ante eget sodales. Sed volutpat justo sit amet imperdiet
-        condimentum. Duis sed mauris eu diam tincidunt cursus. Duis id euismod
-        libero, quis imperdiet sapien. Vivamus lobortis dapibus maximus. Sed
-        tristique tellus et semper malesuada. Praesent quis odio eu diam viverra
-        tempor. Aliquam vitae justo dignissim, vehicula justo eu, molestie
-        libero. Aliquam sed odio ut orci ornare sollicitudin. In bibendum risus
-        in mauris semper, a cursus purus tristique. Donec consectetur, nisi
-        vitae placerat iaculis, justo libero efficitur erat, at ultrices justo
-        purus eget purus. Vivamus congue rutrum feugiat. Nulla facilisi. Nunc
-        porttitor justo nec tellus posuere, vel tincidunt mauris ultricies.
-        Morbi nec tortor nec tortor volutpat rhoncus. Phasellus id purus in orci
-        tempus ornare et sed magna.
+      I am aspiring software engineer who is passionate about learning new innovative techniques capable of making a tangible difference.
+      I strive to connect with clients, teammates and colleagues to create a collaborative environment, allowing me to produce well rounded products and experiences.
+      </Description>
+      <Description>
+      Specialising in <b>web development and user experience</b>, I am constantly learning to create bigger, bolder, customer focused products. So far I've been able to do this through <b>keylogger.app</b>, enabling users of all types to better access scripting learning resources and take preventative cyber security measures against keylogging.
+      </Description>
+      <Description>
+      Currently I'm working on a <b>Multimedia Ranking app</b>, and have been able to use GraphQL, Node.js and Express.
       </Description>
     </Main>
   );
