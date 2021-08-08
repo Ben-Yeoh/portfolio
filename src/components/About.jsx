@@ -26,14 +26,14 @@ const About = () => {
       <span id="about" />
       <Title>About Me</Title>
       <Description>
-      I am aspiring software engineer who is passionate about learning new innovative techniques capable of making a tangible difference.
+      Hello! My name's Ben. I'm an avid software developer who enjoys challenging myself with new ways to improve.
       I strive to connect with clients, teammates and colleagues to create a collaborative environment, allowing me to produce well rounded products and experiences.
       </Description>
       <Description>
-      Specialising in <b>web development and user experience</b>, I am constantly learning to create bigger, bolder, customer focused products. So far I've been able to do this through <b>keylogger.app</b>, enabling users of all types to better access scripting learning resources and take preventative cyber security measures against keylogging.
+      Specialising in <b>web development</b> and <b>user experience</b>, I am constantly learning to create bigger, bolder, customer focused products. So far I've been able to do this through <b>keylogger.app</b>, enabling users of all types to better access scripting learning resources and take preventative cyber security measures against keylogging.
       </Description>
       <Description>
-      Currently I'm working on a <b>Multimedia Ranking app</b>, and have been able to use GraphQL, Node.js and Express.
+      Currently I'm working on a <b>Multimedia Ranking app</b>, where I have been twinkering with GraphQL, Node.js and Express.
       </Description>
     </Main>
   );
