@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useRef } from "react";
 import Circle from "../assets/circle.png";
 import * as THREE from "three";
-import { Canvas, extend, useFrame, useLoader, useThree } from 'react-three-fiber';
+import { Canvas, useFrame, useLoader } from 'react-three-fiber';
 import styled from "styled-components";
 
 const Background = styled.div`
