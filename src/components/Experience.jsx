@@ -3,24 +3,27 @@ import styled from "styled-components";
 
 const Title = styled.h1`
   color: ${(props) => props.theme.secondary};
+  font-size: 3em;
+  font-weight: 600;
 `;
 
 const Subtitle = styled.h2`
-  color: ${(props) => props.theme.body};
-  font-size: 1.2em;
+  color: ${(props) => props.theme.primary};
+  font-size: 1.8em;
+  weight: 500;
   margin: 0;
 `;
 
 const CompanyTitle = styled.span`
   color: ${(props) => props.theme.secondary};
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.8em;
+  font-weight: 500;
   margin: 0;
 `;
 
 const Time = styled.span`
   color: ${(props) => props.theme.secondary};
-  font-size: 1.2em;
+  font-size: 1.8em;
   margin: 0;
   padding-left: 6px;
 `;

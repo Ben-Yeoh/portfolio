@@ -42,7 +42,7 @@ const HeroTitle = () => {
           <Subtitle>Software Developer</Subtitle>
           <Aside>Hi there! I'm an aspiring software engineer who's passionate about learning all things innovative. I love contributing to work that is capable of making a tangible difference.</Aside>
           <a href="mailto:ben.yeoh@outlook.com">
-            <button className="buttons offset" style={{marginTop: "60px", cursor: "pointer"}}><b>Drop a Line</b></button>
+            <button className="buttons offset" style={{marginTop: "60px", cursor: "pointer"}}><b>Contact Me</b></button>
           </a>
         </div>
       </Main>
