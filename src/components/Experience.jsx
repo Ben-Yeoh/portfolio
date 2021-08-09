@@ -110,7 +110,7 @@ const Experience = () => {
   return (
     <div id="experience">
       <Background>
-        <Box style={{marginTop: "10vh"}}>
+        <Box style={{ marginTop: "10vh" }}>
           <Wrapper>
             <Main>
               <Title>Experience</Title>
@@ -161,20 +161,35 @@ const Experience = () => {
                 </Job>
               </Jobs>
               <Resume>
-              <a href={PDF} target = "_blank">
-                <button className="buttons offset" style={{cursor: "pointer"}}><b>Get Resume</b></button>
-              </a>
+                <a href={PDF} target="_blank">
+                  <button
+                    className="buttons offset"
+                    style={{ cursor: "pointer" }}
+                  >
+                    <b>Get Resume</b>
+                  </button>
+                </a>
               </Resume>
             </Main>
           </Wrapper>
         </Box>
-        <Box style={{backgroundColor: "#F28D8D", width: "35vw", padding: "2.5% 20px"}}>
-          <Wrapper>
-          </Wrapper>
+        <Box
+          style={{
+            backgroundColor: "#F28D8D",
+            width: "35vw",
+            padding: "2.5% 20px",
+          }}
+        >
+          <Wrapper></Wrapper>
         </Box>
-        <Box style={{backgroundColor: "#e6c5ff", width: "25vw", padding: "2% 20px"}}>
-          <Wrapper>
-          </Wrapper>
+        <Box
+          style={{
+            backgroundColor: "#e6c5ff",
+            width: "25vw",
+            padding: "2% 20px",
+          }}
+        >
+          <Wrapper></Wrapper>
         </Box>
       </Background>
     </div>

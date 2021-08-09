@@ -72,7 +72,8 @@ const HR = styled.hr`
 `;
 
 const TechUsed = styled.p`
-
+  font-family: Consolas;
+  font-size: 0.9em;  
 `;
 
 const Info = styled.div`
@@ -96,7 +97,7 @@ const Projects = () => {
                 A source of knowledge covering the world of keylogging exploits and the countermeasures you can take. Learn to also design your very own keylogging scripts with in an indepth step-by-step guide.
                 <HR />
                   <TechUsed>
-                    React.js, Gatsby, Firebase, Netlify
+                    » React.js, Gatsby, Firebase, Netlify
                   </TechUsed>
               </Description>
             </Card>
