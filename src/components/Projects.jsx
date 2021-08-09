@@ -68,12 +68,17 @@ const HR = styled.hr`
   border: 0;
   height: 1px;
   margin-top: 25px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
 `;
 
 const TechUsed = styled.p`
   font-family: Consolas;
-  font-size: 0.9em;  
+  font-size: 0.9em;
 `;
 
 const Info = styled.div`
@@ -94,29 +99,36 @@ const Projects = () => {
             <Card>
               <Subtitle>keylogger.app</Subtitle>
               <Description>
-                A source of knowledge covering the world of keylogging exploits and the countermeasures you can take. Learn to also design your very own keylogging scripts with in an indepth step-by-step guide.
+                <p>
+                  A source of knowledge covering the world of keylogging
+                  exploits and the countermeasures you can take.
+                </p>
+                <p>
+                  Learn to also design your very own keylogging scripts with in
+                  an indepth step-by-step guide.
+                </p>
                 <HR />
-                  <TechUsed>
-                    » React.js, Gatsby, Firebase, Netlify
-                  </TechUsed>
+                <TechUsed>» React.js, Gatsby, Firebase, Netlify</TechUsed>
               </Description>
             </Card>
             <a href="https://www.keylogger.app/">
               <Display onMouseEnter={MouseEnter} onMouseLeave={MouseOut}>
-              {visible ? (
-                <>
-                  <Image
-                    style={{ filter: "blur(5px)" }}
-                    src={Keylogger}
-                    alt="keylogger.app screenshot"
-                  />
-                  <Overlay>
-                    <a href="https://www.keylogger.app/"><i>www.keylogger.app</i></a>
-                  </Overlay>
-                </>
-              ) : (
-                <Image src={Keylogger} alt="keylogger.app screenshot" />
-              )}
+                {visible ? (
+                  <>
+                    <Image
+                      style={{ filter: "blur(5px)" }}
+                      src={Keylogger}
+                      alt="keylogger.app screenshot"
+                    />
+                    <Overlay>
+                      <a href="https://www.keylogger.app/">
+                        <i>www.keylogger.app</i>
+                      </a>
+                    </Overlay>
+                  </>
+                ) : (
+                  <Image src={Keylogger} alt="keylogger.app screenshot" />
+                )}
               </Display>
             </a>
           </Info>

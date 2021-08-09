@@ -7,6 +7,7 @@ const Title = styled.h1`
   color: ${(props) => props.theme.highlight};
   font-size: 4em;
   font-weight: 700;
+  margin-bottom: 10px;
 `;
 
 const Icon = styled.img`
@@ -34,11 +35,23 @@ const Main = styled.div`
   padding-bottom: 30vh;
 `;
 
+const Description = styled.p`
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+  width: 80%;
+  color: ${(props) => props.theme.background};
+`;
+
 const Contact = () => {
   return (
     <Main id="contact">
       <Actions>
         <Title>Contact Me</Title>
+        <Description>
+          I'm always keen for new opportunities that will help challenge and develop myself. Feel free to drop me a line, whether it's for a question or a chat.
+        </Description>
+
         <a href="mailto:ben.yeoh@outlook.com">
           <button className="buttons offset" style={{ cursor: "pointer" }}>
             <b>Get in Touch</b>
