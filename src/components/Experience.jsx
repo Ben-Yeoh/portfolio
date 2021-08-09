@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PDF from "../assets/Resume.pdf";
 
 const Title = styled.h1`
   color: white;
@@ -36,7 +37,7 @@ const Description = styled.p`
 `;
 
 const Main = styled.div`
-  width: 80vw;
+  width: 75vw;
   margin-left: 15vh;
   background: ${(props) => props.theme.accent};
 `;
@@ -80,7 +81,6 @@ const ListItem = styled.li`
 const Box = styled.div`
   background-color: ${(props) => props.theme.highlight};
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-top: 50px;
   padding: 5% 20px;
   -webkit-transform: skewY(-5deg);
   -moz-transform: skewY(-5deg);
@@ -101,11 +101,16 @@ const Background = styled.div`
   background-color: ${(props) => props.theme.content};
 `;
 
+const Resume = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const Experience = () => {
   return (
     <div id="experience">
       <Background>
-        <Box>
+        <Box style={{marginTop: "10vh"}}>
           <Wrapper>
             <Main>
               <Title>Experience</Title>
@@ -155,10 +160,20 @@ const Experience = () => {
                   </Description>
                 </Job>
               </Jobs>
-              <div>
-
-              </div>
+              <Resume>
+              <a href={PDF} target = "_blank">
+                <button className="buttons offset" style={{cursor: "pointer"}}><b>Get Resume</b></button>
+              </a>
+              </Resume>
             </Main>
+          </Wrapper>
+        </Box>
+        <Box style={{backgroundColor: "#F28D8D", width: "35vw", padding: "2.5% 20px"}}>
+          <Wrapper>
+          </Wrapper>
+        </Box>
+        <Box style={{backgroundColor: "#e6c5ff", width: "25vw", padding: "2% 20px"}}>
+          <Wrapper>
           </Wrapper>
         </Box>
       </Background>

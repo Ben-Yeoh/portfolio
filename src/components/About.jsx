@@ -26,22 +26,70 @@ const Bold = styled.b`
   color: ${(props) => props.theme.content};
 `;
 
+const Frame = styled.div`
+
+`;
+
+const Image = styled.img`
+  width: 15vw;
+  filter: grayscale(100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
+
+const AboutSection = styled.div`
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+`;
+
+const Box = styled.div`
+  background-color: ${(props) => props.theme.content};
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 5% 20px;
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+  margin-left: 2vw;
+`;
+
+const Wrapper = styled.div`
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);
+`;
+
 const About = () => {
   return (
     <div id="about">
-      <Main>
-        <Title>About Me</Title>
-        <Description>
-        Hello! My name's Ben. I'm an avid software developer who enjoys challenging myself with new ways to improve my craft.
-        I strive to connect with clients, teammates and colleagues to create a collaborative environment, allowing me to produce well rounded products and experiences.
-        </Description>
-        <Description>
-        Specialising in <Bold>web development</Bold> and <Bold>user experience</Bold>, I am constantly learning to create bigger, bolder, customer focused products. So far I've been able to do this through <Bold>keylogger.app</Bold>, enabling users of all types to better access scripting learning resources and take preventative cyber security measures against keylogging.
-        </Description>
-        <Description>
-        Currently I'm working on a <Bold>Multimedia Ranking app</Bold>, where I have been tinkering with GraphQL, Node.js and Express.
-        </Description>
-      </Main>
+      <AboutSection>
+        <Main>
+          <Title>About Me</Title>
+          <Description>
+          Hello! My name's Ben. I'm an avid software developer who enjoys challenging myself with new ways to improve my craft.
+          I strive to connect with clients, teammates and colleagues to create a collaborative environment, allowing me to produce well rounded products and experiences.
+          </Description>
+          <Description>
+          Specialising in <Bold>web development</Bold> and <Bold>user experience</Bold>, I am constantly learning to create bigger, bolder, customer focused products.
+          </Description>
+          <Description>
+          So far I've been able to do this through <a href="/#projects"><Bold>keylogger.app</Bold></a>, enabling users of all types to better access scripting learning resources and take preventative cyber security measures against keylogging.
+          </Description>
+          <Description>
+          Currently I'm working on a <Bold>Multimedia Ranking app</Bold>, where I have been tinkering with GraphQL, Node.js and Express.
+          </Description>
+        </Main>
+        <Frame>
+          <Box>
+            <Wrapper>
+              <Image src="https://media-exp1.licdn.com/dms/image/C5603AQFE3oecUWZfDQ/profile-displayphoto-shrink_800_800/0/1628427748699?e=1634169600&v=beta&t=02Xp4CGpnmOil32YN3w2wIvxbD_IXyLSksrYgxGeRC0" alt="Headshot photo" />
+            </Wrapper>
+          </Box>
+        </Frame>
+      </AboutSection>
     </div>
   );
 };
