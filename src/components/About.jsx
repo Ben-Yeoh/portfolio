@@ -32,7 +32,7 @@ const Frame = styled.div`
 
 const Image = styled.img`
   width: 15vw;
-  filter: grayscale(100%);
+  // filter: grayscale(100%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 

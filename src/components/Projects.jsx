@@ -85,6 +85,12 @@ const Info = styled.div`
   display: flex;
 `;
 
+const Link = styled.a`
+  font-size: 0.8em;
+  color: ${(props) => props.theme.background};
+  font-family: Consolas;
+`;
+
 const Projects = () => {
   const [visible, setVisible] = React.useState(false);
   const MouseEnter = () => setVisible(true);
@@ -116,14 +122,14 @@ const Projects = () => {
                 {visible ? (
                   <>
                     <Image
-                      style={{ filter: "blur(5px)" }}
+                      style={{ filter: "blur(2px)" }}
                       src={Keylogger}
                       alt="keylogger.app screenshot"
                     />
                     <Overlay>
-                      <a href="https://www.keylogger.app/">
-                        <i>www.keylogger.app</i>
-                      </a>
+                      <Link href="https://www.keylogger.app/">
+                        www.keylogger.app
+                      </Link>
                     </Overlay>
                   </>
                 ) : (
