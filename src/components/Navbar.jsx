@@ -3,7 +3,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import styled from "styled-components";
 
 const Option = styled(Link)`
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   text-decoration: none;
 `;
 
@@ -29,7 +29,7 @@ const Navigation = styled.ul`
       padding: 0 10px;
     }
     &:before {
-      content: '';
+      content: "";
       width: 2px;
       background: grey;
       height: 100%;
@@ -41,8 +41,8 @@ const Navigation = styled.ul`
     }
     &:after {
       height: 2px;
-      background: ${props => props.theme.secondary};
-      content: '';
+      background: ${(props) => props.theme.secondary};
+      content: "";
       width: 0;
       position: absolute;
       transform: translateX(-50%);
@@ -85,10 +85,18 @@ const Navbar = () => {
   return (
     <Main>
       <Navigation>
-        <Option to="/#about">About</Option>
-        <Option to="/#projects">Projects</Option>
-        <Option to="/#experience">Experience</Option>
-        <Option to="/#contact">Contact</Option>
+        <Option to="/#about">
+          <b>About</b>
+        </Option>
+        <Option to="/#projects">
+          <b>Projects</b>
+        </Option>
+        <Option to="/#experience">
+          <b>Experience</b>
+        </Option>
+        <Option to="/#contact">
+          <b>Contact</b>
+        </Option>
       </Navigation>
     </Main>
   );
