@@ -38,7 +38,6 @@ const Description = styled.p`
 
 const Main = styled.div`
   width: 75vw;
-  margin-left: 15vh;
   background: ${(props) => props.theme.accent};
 `;
 
@@ -95,6 +94,8 @@ const Wrapper = styled.div`
   -ms-transform: skewY(5deg);
   -o-transform: skewY(5deg);
   transform: skewY(5deg);
+  display: flex;
+  justify-content: center;
 `;
 
 const Background = styled.div`

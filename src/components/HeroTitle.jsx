@@ -37,7 +37,7 @@ const HeroTitle = () => {
   return (
     <>
       <Main>
-        <div>
+        <div style={{paddingLeft: "10vw"}}>
           <Title>Ben Yeoh</Title>
           <Subtitle>Software Developer</Subtitle>
           <Aside>Hi there! I'm an aspiring software engineer who's passionate about learning all things innovative. I love contributing to work that is capable of making a tangible difference.</Aside>
