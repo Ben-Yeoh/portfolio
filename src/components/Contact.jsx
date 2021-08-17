@@ -58,10 +58,10 @@ const Contact = () => {
           </button>
         </a>
         <Icons>
-          <a href="https://www.linkedin.com/in/ben-yeoh-7472a4190/">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ben-yeoh-7472a4190/">
             <Icon src={LinkedIn} alt="LinkedIn Logo" />
           </a>
-          <a href="https://github.com/Ben-Yeoh/">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ben-Yeoh/">
             <Icon src={GitHub} alt="GitHub Logo" />
           </a>
         </Icons>
