@@ -1,6 +1,7 @@
-import "./App.css";
-import React, { Suspense } from "react";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+
 import Navbar from "./components/Navbar";
 import AnimationCanvas from "./components/AnimationCanvas";
 import HeroTitle from "./components/HeroTitle";
@@ -8,8 +9,9 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import { ThemeProvider } from "styled-components";
+
 import theme from "./styles/theme";
+import "./App.css";
 
 function App() {
   React.useEffect(() => {
@@ -21,9 +23,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <div>
           <Navbar />
-          <Suspense fallback={<div>...</div>}>
+          <React.Suspense fallback={<div></div>}>
             <AnimationCanvas />
-          </Suspense>
+          </React.Suspense>
           <HeroTitle />
           <About />
           <Projects />
