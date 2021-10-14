@@ -2,54 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Keylogger from "../assets/keylogger.png";
 import Portfolio from "../assets/Portfolio.png";
+import ProjectCard from "./ProjectCard";
 
 const Title = styled.h1`
   color: ${(props) => props.theme.highlight};
   font-size: 3em;
   font-weight: 700;
-`;
-
-const Subtitle = styled.h2`
-  color: ${(props) => props.theme.primary};
-  font-weight: 600;
-  font-size: 2em;
-`;
-
-const Description = styled.p`
-  color: ${(props) => props.theme.secondary};
-  width: 80%;
-  font-size: 1.2em;
-`;
-
-const Card = styled.div`
-  padding: 1%;
-  padding-left: 3%;
-  width: 50%;
-  background-color: ${(props) => props.theme.highlight};
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 3px;
-`;
-
-const Image = styled.img`
-  height: 450px;
-  border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: filter 0.3s;
-`;
-
-const Overlay = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-`;
-
-const Display = styled.div`
-  position: relative;
-  text-align: center;
-  color: black;
-  height: 100%;
 `;
 
 const Main = styled.div`
@@ -59,135 +17,35 @@ const Main = styled.div`
   margin-bottom: 80px;
 `;
 
-const Project = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-`;
-
-const HR = styled.hr`
-  border: 0;
-  height: 1px;
-  margin-top: 25px;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0)
-  );
-`;
-
-const TechUsed = styled.p`
-  font-family: Consolas;
-  font-size: 0.9em;
-`;
-
-const Info = styled.div`
-  display: flex;
-  margin: 2%;
-`;
-
-const Link = styled.a`
-  font-size: 0.8em;
-  color: ${(props) => props.theme.background};
-  font-family: Consolas;
-`;
+const projects = [
+  {
+    url: "https://www.keylogger.app/",
+    shortUrl: "www.keylogger.app",
+    title: "keylogger.app ⌨️",
+    desc: "A source of knowledge covering the world of keylogging exploits and the countermeasures you can take.",
+    aside: "Learn to also design your very own keylogging scripts with in an indepth step-by-step guide.",
+    techUsed: "React.js, Gatsby, Firebase, Netlify",
+    image: Keylogger,
+    imageDesc: "keylogger.app screenshot",
+  },
+  {
+    url: "https://www.yeoh.io/",
+    shortUrl: "www.yeoh.io",
+    title: "Portfolio 👋",
+    desc: "I also happened to develop this very website!",
+    aside: "I hope you enjoy your time here ❤️",
+    techUsed: "React.js, Netlify",
+    image: Portfolio,
+    imageDesc: "yeoh.io screenshot",
+  }
+];
 
 const Projects = () => {
-  const [visible, setVisible] = React.useState({
-    keylogger: false,
-    portfolio: false,
-  });
-
   return (
     <div id="projects">
       <Main>
         <Title>My Projects</Title>
-        <Project>
-          <Info>
-            <Card>
-              <Subtitle>keylogger.app ⌨️</Subtitle>
-              <Description>
-                <p>
-                  A source of knowledge covering the world of keylogging
-                  exploits and the countermeasures you can take.
-                </p>
-                <p>
-                  Learn to also design your very own keylogging scripts with in
-                  an indepth step-by-step guide.
-                </p>
-                <HR />
-                <TechUsed>» React.js, Gatsby, Firebase, Netlify</TechUsed>
-              </Description>
-            </Card>
-            <a href="https://www.keylogger.app/">
-              <Display
-                onMouseEnter={() => setVisible({ ...visible, keylogger: true })}
-                onMouseLeave={() =>
-                  setVisible({ ...visible, keylogger: false })
-                }
-              >
-                {visible.keylogger ? (
-                  <>
-                    <Image
-                      style={{ filter: "blur(2px)" }}
-                      src={Keylogger}
-                      alt="keylogger.app screenshot"
-                    />
-                    <Overlay>
-                      <Link href="https://www.keylogger.app/">
-                        www.keylogger.app
-                      </Link>
-                    </Overlay>
-                  </>
-                ) : (
-                  <Image src={Keylogger} alt="keylogger.app screenshot" />
-                )}
-              </Display>
-            </a>
-          </Info>
-        </Project>
-        <Project>
-          <Info>
-            <Card>
-              <Subtitle>Portfolio 👋</Subtitle>
-              <Description>
-                <p>I also happened to develop this very website!</p>
-                <p>I hope you enjoy your time here ❤️</p>
-                <HR />
-                <TechUsed>» React.js, Netlify</TechUsed>
-              </Description>
-            </Card>
-            <a href="https://www.yeoh.io/">
-              <Display
-                onMouseEnter={() => setVisible({ ...visible, portfolio: true })}
-                onMouseLeave={() =>
-                  setVisible({ ...visible, portfolio: false })
-                }
-              >
-                {visible.portfolio ? (
-                  <>
-                    <Image
-                      style={{ filter: "blur(2px)" }}
-                      src={Portfolio}
-                      alt="yeoh.io screenshot"
-                    />
-                    <Overlay>
-                      <Link
-                        href="https://www.yeoh.io/"
-                        style={{ color: "white" }}
-                      >
-                        www.yeoh.io
-                      </Link>
-                    </Overlay>
-                  </>
-                ) : (
-                  <Image src={Portfolio} alt="yeoh.io screenshot" />
-                )}
-              </Display>
-            </a>
-          </Info>
-        </Project>
+        { projects.map(p => <ProjectCard {...p} /> ) }
       </Main>
     </div>
   );
