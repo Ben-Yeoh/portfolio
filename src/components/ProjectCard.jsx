@@ -28,6 +28,7 @@ const Image = styled.img`
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: filter 0.3s;
+  object-fit: cover;
 `;
 
 const Overlay = styled.div`
