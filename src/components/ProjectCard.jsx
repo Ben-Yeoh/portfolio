@@ -23,6 +23,7 @@ const Card = styled.div`
 `;
 
 const Image = styled.img`
+  max-width: 40vw;
   height: 450px;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -42,6 +43,7 @@ const Display = styled.div`
   text-align: center;
   color: black;
   height: 100%;
+  padding: 2%;
 `;
 
 const Project = styled.div`
