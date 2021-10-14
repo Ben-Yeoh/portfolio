@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import headshot from "../assets/headshot.jpg";
 
 const Title = styled.h1`
   color: ${(props) => props.theme.primary};
@@ -85,7 +86,7 @@ const About = () => {
         <Frame>
           <Box>
             <Wrapper>
-              <Image src="https://media-exp1.licdn.com/dms/image/C5603AQFE3oecUWZfDQ/profile-displayphoto-shrink_800_800/0/1628427748699?e=1634169600&v=beta&t=02Xp4CGpnmOil32YN3w2wIvxbD_IXyLSksrYgxGeRC0" alt="Headshot photo" />
+              <Image src={headshot} alt="Headshot photo" />
             </Wrapper>
           </Box>
         </Frame>
