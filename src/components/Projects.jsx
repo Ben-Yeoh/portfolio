@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Keylogger from "../assets/keylogger.png";
+import Portfolio from "../assets/Portfolio.png";
 
 const Title = styled.h1`
   color: ${(props) => props.theme.highlight};
@@ -30,10 +31,10 @@ const Card = styled.div`
 `;
 
 const Image = styled.img`
-  height: 100%;
   height: 450px;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: filter 0.3s;
 `;
 
 const Overlay = styled.div`
@@ -83,6 +84,7 @@ const TechUsed = styled.p`
 
 const Info = styled.div`
   display: flex;
+  margin: 2%;
 `;
 
 const Link = styled.a`
@@ -92,9 +94,10 @@ const Link = styled.a`
 `;
 
 const Projects = () => {
-  const [visible, setVisible] = React.useState(false);
-  const MouseEnter = () => setVisible(true);
-  const MouseOut = () => setVisible(false);
+  const [visible, setVisible] = React.useState({
+    keylogger: false,
+    portfolio: false,
+  });
 
   return (
     <div id="projects">
@@ -103,7 +106,7 @@ const Projects = () => {
         <Project>
           <Info>
             <Card>
-              <Subtitle>keylogger.app</Subtitle>
+              <Subtitle>keylogger.app ⌨️</Subtitle>
               <Description>
                 <p>
                   A source of knowledge covering the world of keylogging
@@ -118,8 +121,13 @@ const Projects = () => {
               </Description>
             </Card>
             <a href="https://www.keylogger.app/">
-              <Display onMouseEnter={MouseEnter} onMouseLeave={MouseOut}>
-                {visible ? (
+              <Display
+                onMouseEnter={() => setVisible({ ...visible, keylogger: true })}
+                onMouseLeave={() =>
+                  setVisible({ ...visible, keylogger: false })
+                }
+              >
+                {visible.keylogger ? (
                   <>
                     <Image
                       style={{ filter: "blur(2px)" }}
@@ -134,6 +142,47 @@ const Projects = () => {
                   </>
                 ) : (
                   <Image src={Keylogger} alt="keylogger.app screenshot" />
+                )}
+              </Display>
+            </a>
+          </Info>
+        </Project>
+        <Project>
+          <Info>
+            <Card>
+              <Subtitle>Portfolio 👋</Subtitle>
+              <Description>
+                <p>I also happened to develop this very website!</p>
+                <p>I hope you enjoy your time here ❤️</p>
+                <HR />
+                <TechUsed>» React.js, Netlify</TechUsed>
+              </Description>
+            </Card>
+            <a href="https://www.yeoh.io/">
+              <Display
+                onMouseEnter={() => setVisible({ ...visible, portfolio: true })}
+                onMouseLeave={() =>
+                  setVisible({ ...visible, portfolio: false })
+                }
+              >
+                {visible.portfolio ? (
+                  <>
+                    <Image
+                      style={{ filter: "blur(2px)" }}
+                      src={Portfolio}
+                      alt="yeoh.io screenshot"
+                    />
+                    <Overlay>
+                      <Link
+                        href="https://www.yeoh.io/"
+                        style={{ color: "white" }}
+                      >
+                        www.yeoh.io
+                      </Link>
+                    </Overlay>
+                  </>
+                ) : (
+                  <Image src={Portfolio} alt="yeoh.io screenshot" />
                 )}
               </Display>
             </a>
