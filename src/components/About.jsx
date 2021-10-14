@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import headshot from "../assets/headshot.jpg";
+import headshot from "../assets/Headshot.png";
 
 const Title = styled.h1`
   color: ${(props) => props.theme.primary};
