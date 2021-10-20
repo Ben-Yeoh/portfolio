@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Job from "./Job";
 import PDF from "../assets/BenYeoh.pdf";
 
 const Title = styled.h1`
