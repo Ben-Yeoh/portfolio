@@ -27,10 +27,6 @@ const Bold = styled.b`
   color: ${(props) => props.theme.content};
 `;
 
-const Frame = styled.div`
-
-`;
-
 const Image = styled.img`
   width: 15vw;
   // filter: grayscale(100%);
@@ -83,13 +79,13 @@ const About = () => {
           Currently I'm working on a <Bold>Multimedia Ranking app</Bold>, where I have been tinkering with GraphQL, Node.js and Express.
           </Description>
         </Main>
-        <Frame>
+        <div>
           <Box>
             <Wrapper>
               <Image src={headshot} alt="Headshot photo" />
             </Wrapper>
           </Box>
-        </Frame>
+        </div>
       </AboutSection>
     </div>
   );
