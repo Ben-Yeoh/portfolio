@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PDF from "../assets/Resume.pdf";
+import PDF from "../assets/BenYeoh.pdf";
 
 const Title = styled.h1`
   color: white;
