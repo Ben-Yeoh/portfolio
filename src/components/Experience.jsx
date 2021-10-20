@@ -84,7 +84,7 @@ const Experience = () => {
                 {jobs.map(job => <Job {...job} />)}
               </Jobs>
               <Resume>
-                <a href={PDF} target="_blank">
+                <a href={PDF} target="_blank" rel="noreferrer">
                   <button
                     className="buttons offset"
                     style={{ cursor: "pointer" }}
