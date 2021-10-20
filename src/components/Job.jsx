@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+const Container = styled.div`
+  width: 40%;
+  background-color: rgba(33, 19, 43, 0.4);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 7vh;
+`;
+
 const Subtitle = styled.h2`
   color: ${(props) => props.theme.primary};
   font-size: 1.8em;
@@ -54,7 +62,7 @@ const ListItem = styled.li`
 
 const Job = ({ subtitle, company, time, descriptions }) => {
   return (
-    <Job>
+    <Container>
       <Heading>
         <Subtitle>{subtitle}</Subtitle>
         <CompanyTitle>{company}</CompanyTitle> <Time>{time}</Time>
@@ -64,7 +72,7 @@ const Job = ({ subtitle, company, time, descriptions }) => {
             {descriptions.map(d => <ListItem>{d}</ListItem>)}
         </List>
       </Description>
-    </Job>
+    </Container>
   );
 };
 
