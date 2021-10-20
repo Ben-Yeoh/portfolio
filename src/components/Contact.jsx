@@ -58,7 +58,7 @@ const Contact = () => {
           </button>
         </a>
         <Icons>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ben-yeoh-7472a4190/">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ben-yeoh/">
             <Icon src={LinkedIn} alt="LinkedIn Logo" />
           </a>
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ben-Yeoh/">
