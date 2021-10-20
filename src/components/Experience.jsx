@@ -14,14 +14,6 @@ const Main = styled.div`
   background: ${(props) => props.theme.accent};
 `;
 
-const Job = styled.div`
-  width: 40%;
-  background-color: rgba(33, 19, 43, 0.4);
-  border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-bottom: 7vh;
-`;
-
 const Jobs = styled.div`
   display: flex;
   justify-content: space-between;
